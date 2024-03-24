@@ -1,4 +1,5 @@
 <?php
+#vamos ver carlos
 require_once 'Kinghost.php';
 
 class Cliente extends Kinghost
