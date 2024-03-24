@@ -12,7 +12,6 @@ $clienteNome = $_POST['clienteNome'];
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-
 $login = 'carloskdu@itepbrasil.net';
 $senha = 'Learning@2023';
 
