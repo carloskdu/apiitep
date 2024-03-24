@@ -8,7 +8,6 @@ class Cliente extends Kinghost
     {
         parent::__construct($username, $password);
     }
-
     // addCliente() {{{
     /**
      * Chama o metodo que adiciona um cliente de revenda em sua conta

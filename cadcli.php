@@ -48,5 +48,4 @@ $r = $kinghost->addClientes($param);
 
 var_dump($_POST);
 var_dump($r);
-
 ?>
