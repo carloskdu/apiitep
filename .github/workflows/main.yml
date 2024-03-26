@@ -14,8 +14,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        #${{ secrets.ftp_host }}
-        server: ftp.itepbrasil.net
-        username: itepbrasil
+        server: ${{ secrets.FTP_HOST }} 
+        username: ${{ secrets.FTP_USER }} 
         password: ${{ secrets.FTP_PASSWORD }} 
         server-dir: /www/apiitep/
