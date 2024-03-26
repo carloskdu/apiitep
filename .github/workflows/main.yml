@@ -17,5 +17,5 @@ jobs:
         #${{ secrets.ftp_host }}
         server: ftp.itepbrasil.net
         username: itepbrasil
-        password: apc6iansti.$41
+        password: apc6iansti
         server-dir: /www/apiitep/
