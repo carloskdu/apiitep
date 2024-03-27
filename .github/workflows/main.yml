@@ -10,16 +10,15 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
-    # - name: Install dependencies
-    #   uses: php-actions/composer@v6
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      
+    - name: 🚀 Transfer files and Run Composer Install
+      uses: appleboy/scp-action@master
       with:
-        server: ${{ secrets.FTP_HOST }} 
-        username: ${{ secrets.FTP_USER }} 
-        password: ${{ secrets.FTP_PASSWORD }} 
-        server-dir: /www/apiitep/
+        host: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        source: "." # diretório atual
+        target: "/www/apiitep/"
         script: |
           cd /www/apiitep/
           composer install --no-dev --optimize-autoloader
