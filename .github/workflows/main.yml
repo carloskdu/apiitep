@@ -19,6 +19,13 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         source: "." # diretório atual
         target: "/www/apiitep/"
+        overwrite: true
+    - name: 🚀 SSH into Server and Run Composer Install
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
         script: |
           cd /www/apiitep/
           composer install --no-dev --optimize-autoloader
