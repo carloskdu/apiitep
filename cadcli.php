@@ -10,7 +10,7 @@ require_once 'Cliente.php';
 // $clienteNome = $_POST['clienteNome'];
 // $clienteEmail = $_POST['clienteEmail'];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['CONTENT_TYPE'] === 'application/json') {
+//if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['CONTENT_TYPE'] === 'application/json') {
     // Recebe os dados JSON da requisição
     $jsonData = file_get_contents('php://input');
 
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['CONTENT_TYPE'] === 'appli
         $campo2 = $data['campo2'];
 
     }
-}
+//}
 #$dotenv = Dotenv::createImmutable(__DIR__);
 #$dotenv->load();
 
