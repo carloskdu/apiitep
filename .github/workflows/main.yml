@@ -10,16 +10,15 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
-      
-    - name: 🚀 Transfer files and Run Composer Install
-      uses: appleboy/scp-action@master
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        host: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        source: "." # diretório atual
-        target: "/home/itepbrasil/www/apiitep/"
-        overwrite: true
+        server: ${{ secrets.FTP_HOST }} 
+        username: ${{ secrets.FTP_USER }} 
+        password: ${{ secrets.FTP_PASSWORD }} 
+        server-dir: /www/apiitep/
+        
     - name: 🚀 SSH into Server and Run Composer Install
       uses: appleboy/ssh-action@master
       with:
