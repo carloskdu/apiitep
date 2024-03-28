@@ -62,7 +62,7 @@ require_once 'Cliente.php';
 
 //$r = $kinghost->addClientes($param);
 
-var_dump($data);
+var_dump($jsonData);
 
 //var_dump($param);
 ?>
