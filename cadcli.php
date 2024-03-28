@@ -13,10 +13,18 @@ require_once 'Cliente.php';
 //if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['CONTENT_TYPE'] === 'application/json') {
     // Recebe os dados JSON da requisição
     $jsonData = file_get_contents('php://input');
+    //$jsonData = '{ "clienteTipo": "I", "clienteCPFCNPJ": "00112135045", "clienteEmpresa": "NomeEmpresa", "clienteNome": "Criar dominio", "clienteEmail": "djalmasilva2@fatec.com.br", "clienteEmailCobranca": "emailcobranca@dominio.com.br", "clienteSenhaPainel": "654321", "clienteFone": "555100000000", "clienteFax": "555100000001", "clienteCEP": "44587421", "clienteEndereco": "ruanome", "clienteBairro": "meubairro", "clienteCidade": "porto alegre", "clienteEstado": "rs", "clienteLimiteMapeamento": "1", "clienteLimiteSubdominio": "2", "clienteLimiteMysql": "3", "clienteLimiteMssql": "1", "clienteLimitePgsql": "1", "clienteLimiteFirebird": "1", "clienteLimiteFTPADD": "1", "clienteUniBox": "on", "clienteAcessoFTP": "on", "clienteAcessoDownloadBackup": "on" }';
 
     // Converte os dados JSON em um array associativo ou objeto PHP
     $data = json_decode($jsonData, true); // Se o segundo parâmetro for true, ele retornará um array associativo
 
+
+    if ($data === null && json_last_error() !== JSON_ERROR_NONE) {
+        echo "Erro ao decodificar a string JSON: " . json_last_error_msg();
+    } else {
+        // Se a decodificação foi bem-sucedida
+        var_dump($data); // Exibe a estrutura de dados resultante
+    }
     // Verifica se a conversão foi bem-sucedida
 
 //}
@@ -57,7 +65,7 @@ require_once 'Cliente.php';
 
 //$r = $kinghost->addClientes($param);
 
-var_dump($data);
+//var_dump($data);
 
 //var_dump($param);
 ?>
