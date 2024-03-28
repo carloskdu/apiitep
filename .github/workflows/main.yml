@@ -26,5 +26,5 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         script: |
-          cd /www/apiitep/
-          composer install --no-dev --optimize-autoloader
+          cd www/apiitep/
+          php composer.phar install --no-dev --optimize-autoloader
