@@ -49,5 +49,5 @@ $param = array(
 
 var_dump($_POST);
 
-var_dump($param);
+//var_dump($param);
 ?>
