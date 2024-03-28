@@ -45,9 +45,9 @@ $param = array(
     'clienteAcessoDownloadBackup' => 'on'
 );
 
-$r = $kinghost->addClientes($param);
+//$r = $kinghost->addClientes($param);
 
 var_dump($_POST);
 
-var_dump($r);
+var_dump($param);
 ?>
