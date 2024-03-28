@@ -8,6 +8,7 @@ use GuzzleHttp\Client;
 require_once 'Cliente.php';
 
 $clienteNome = $_POST['clienteNome'];
+$clienteEmail = $_POST['clienteEmail'];
 
 #$dotenv = Dotenv::createImmutable(__DIR__);
 #$dotenv->load();
@@ -22,8 +23,8 @@ $param = array(
     'clienteCPFCNPJ' => '045.694.330-73',
     'clienteEmpresa' => 'NomeEmpresa',
     'clienteNome' => $clienteNome,
-    'clienteEmail' => 'email@dominio.com.br',
-    'clienteEmailCobranca' => 'emailcobranca@dominio.com.br',
+    'clienteEmail' => $clienteEmail,
+    'clienteEmailCobranca' => $clienteEmail,
     'clienteSenhaPainel' => '654321',
     'clienteFone' => '555100000000',
     'clienteFax' => '555100000001',
