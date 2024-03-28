@@ -18,12 +18,7 @@ require_once 'Cliente.php';
     $data = json_decode($jsonData, true); // Se o segundo parâmetro for true, ele retornará um array associativo
 
     // Verifica se a conversão foi bem-sucedida
-    if ($data !== null) {
-        // Agora você pode acessar os campos do array associativo e realizar o tratamento necessário
-        $campo1 = $data['campo1'];
-        $campo2 = $data['campo2'];
 
-    }
 //}
 #$dotenv = Dotenv::createImmutable(__DIR__);
 #$dotenv->load();
@@ -62,7 +57,7 @@ require_once 'Cliente.php';
 
 //$r = $kinghost->addClientes($param);
 
-var_dump($jsonData);
+var_dump($data);
 
 //var_dump($param);
 ?>
