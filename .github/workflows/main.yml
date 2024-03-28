@@ -19,12 +19,12 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }} 
         server-dir: /www/apiitep/
         
-    - name: 🚀 SSH into Server and Run Composer Install
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        script: |
-          cd www/apiitep/
-          php composer.phar install --no-dev --optimize-autoloader
+   # - name: 🚀 SSH into Server and Run Composer Install
+   #   uses: appleboy/ssh-action@master
+   #   with:
+   #     host: ${{ secrets.FTP_HOST }}
+   #     username: ${{ secrets.FTP_USER }}
+   #     password: ${{ secrets.FTP_PASSWORD }}
+   #     script: |
+   #       cd www/apiitep/
+   #       php composer.phar install --no-dev --optimize-autoloader
