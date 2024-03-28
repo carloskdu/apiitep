@@ -23,8 +23,8 @@ require_once 'Cliente.php';
         echo "Erro ao decodificar a string JSON: " . json_last_error_msg();
     } else {
        
-            $dotenv = Dotenv::createImmutable(__DIR__);
-            $dotenv->load();
+            // $dotenv = Dotenv::createImmutable(__DIR__);
+            // $dotenv->load();
 
             $login = 'carloskdu@itepbrasil.net';
             $senha = 'Learning@2023';
