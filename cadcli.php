@@ -31,14 +31,16 @@ require_once 'Cliente.php';
 
             $kinghost = new Cliente($login, $senha);
 
+            // Imprime os 8 dígitos aleatórios
+            #echo substr(bin2hex(random_bytes(4)), 0, 8);
+
             $param = array(
-                'clienteTipo' => $data['clienteTipo'],
-                'clienteCPFCNPJ' => $data['clienteCPFCNPJ'],
+                'clienteTipo' => ($data['clienteTipo']=='CPF')? "F":"J",
                 'clienteEmpresa' => $data['clienteEmpresa'],
                 'clienteNome' => $data['clienteNome'],
                 'clienteEmail' => $data['clienteEmail'],
-                'clienteEmailCobranca' => $data['clienteEmailCobranca'],
-                'clienteSenhaPainel' => $data['clienteSenhaPainel'],
+                'clienteEmailCobranca' => ($data['clienteEmailCobranca']!='')? $data['clienteEmailCobranca']: $data['clienteEmail'],
+                'clienteSenhaPainel' => substr(bin2hex(random_bytes(4)), 0, 8),
                 'clienteFone' => $data['clienteFone'],
                 'clienteFax' => $data['clienteFax'],
                 'clienteCEP' => $data['clienteCEP'],
