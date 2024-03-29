@@ -37,6 +37,7 @@ require_once 'Cliente.php';
             $param = array(
                 'clienteTipo' => ($data['clienteTipo']=='CPF')? "F":"J",
                 'clienteEmpresa' => $data['clienteEmpresa'],
+                'clienteCPFCNPJ'=> $data['clienteCPFCNPJ'],
                 'clienteNome' => $data['clienteNome'],
                 'clienteEmail' => $data['clienteEmail'],
                 'clienteEmailCobranca' => ($data['clienteEmailCobranca']!='')? $data['clienteEmailCobranca']: $data['clienteEmail'],
